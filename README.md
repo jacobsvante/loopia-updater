@@ -3,7 +3,7 @@
 When you don't have a static IP from your ISP but need to make sure that your Loopia domain names always point to the current external IP.
 Put in your server crontab and run as often as you see fit.
 
-Username and password can either be specified as arguments, or in ~/.loopiaapi.ini, in standard INI-format:
+API username and password ([which you need to create here](https://customerzone.loopia.se/settings/loopia-api/)) can either be specified as arguments, or in ~/.loopiaapi.ini, in standard INI-format:
 
     [credentials]
     username = USERNAME
