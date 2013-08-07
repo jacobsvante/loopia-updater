@@ -45,7 +45,7 @@ CONFIG_LOCATION = expand_filepath('~/.loopiaapi.ini')
 EXTERNAL_IP_FILEPATH = expand_filepath('~/.loopiaapi-externalip')
 
 
-def get_credentials(path=CONFIG_LOCATION):
+def get_config_credentials(path=CONFIG_LOCATION):
     config = configparser.ConfigParser()
     config.read(expand_filepath(path))
     auth = []
@@ -171,9 +171,12 @@ if __name__ == '__main__':
         help='Force update of domains, even if no new IP was encountered.')
     args = parser.parse_args()
 
-    file_username, file_password = get_credentials()
-    args.username = args.username or file_username
-    args.password = args.password or file_password
+    username = args.username
+    password = args.password
+    if not args.username and args.password:
+        username, password = get_config_credentials()
+    args.username = username or ''
+    args.password = password or ''
 
     current_ip = whats_my_ip()
 
