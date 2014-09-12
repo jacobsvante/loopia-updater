@@ -34,5 +34,5 @@ Force update of IP, might be useful on the first run as Loopia's API is never hi
    /path/to/loopia_updater.py jacobian.se -u USERNAME -p PASSWORD -f
 
 ## Links
-* [@pyjacob](https://twitter.com/pyjacob)
+* [@pyjacob](https://twitter.com/jacobsvante_)
 * [LoopiaAPI account creation](https://customerzone.loopia.se/settings/loopia-api/)
